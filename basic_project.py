@@ -20,14 +20,17 @@ obstacle_rectangle4 = arena.create_rectangle(0, 350, 250, 400, fill = "red")
 obstacle_rectangle5 = arena.create_rectangle(400, 350, 450, 400, fill = "red")
 obstacle_rectangle6 = arena.create_rectangle(0, 0, 100, 200, fill = "red")
 start_area = arena.create_rectangle(0, 450, 50, 500, fill = "#00FF99") # uses a Hexidecimal code for light green
+
 #flag gif
 gif1 = PhotoImage(file = 'flag.gif')
 arena.create_image(500, 0, image = gif1, anchor = NE)
+
 #create triangle robot
-arena.create_polygon([(1, 1), (1, 200), (100, 100)])
+arena.create_polygon([(10, 450), (10, 500), (40, 475)])
 arena.pack()
 arena.update_idletasks()
-window.mainloop()
+
+
 
 
 """
