@@ -1,8 +1,9 @@
 """
 set up window
 """
-
+import time
 from Tkinter import * # imports everything from the Tkinter library
+ # Importing time library
 window = Tk() # generates a window 
 arena = Canvas(window, width = 500, height = 500, bg = 'white') # generates a canvas of 500px x 500px for the arena
 arena.pack()
@@ -22,11 +23,12 @@ obstacle_rectangle6 = arena.create_rectangle(0, 0, 100, 200, fill = "red", outli
 start_area = arena.create_rectangle(0, 450, 50, 500, fill = "#00FF99", outline = "#00FF99") # uses a Hexidecimal code for light green
 
 #flag gif
-gif1 = PhotoImage(file = 'flag.gif')
-arena.create_image(500, 0, image = gif1, anchor = NE)
-
+gif1 = PhotoImage(file = 'flag')
+arena.create_image(500, 0, image = gif1, anchor = NE,)
 #create triangle robot
-arena.create_polygon([(10, 450), (10, 500), (40, 475)])
+
+
+robot = arena.create_polygon([(10, 450), (10, 500), (40, 475)], fill="green")
 arena.pack()
 arena.update_idletasks()
 
@@ -37,4 +39,17 @@ arena.update_idletasks()
 run program
 """
 
+for t in range(0,450):
+    arena.move(robot , 1 , 0)
+    arena.update()
+    time.sleep(0.1)
+
+
+    
+#robot_front, robot_back1, robot_back2 = arena.coords(robot)
+
+#print robot_front
+
+
 window.mainloop() # runs everything
+
