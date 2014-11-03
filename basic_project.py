@@ -26,23 +26,22 @@ gif1 = PhotoImage(file = 'flag')
 arena.create_image(500, 0, image = gif1, anchor = NE,)
 
 #create triangle robot
-robot = arena.create_polygon([(10, 450), (10, 500), (40, 475)], fill="#366605")
-arena.pack()
+robot = arena.create_oval(20, 460, 50,  490, fill="#366605") #Creates a circle for our robot, coloured a shade of green
+arena.pack() 
 arena.update_idletasks()
+
+
 
 """
 run program
 """
 
-for t in range(0,450):
-    arena.move(robot , 1 , 0)
-    arena.update()
-    time.sleep(0.1)
+for t in range(0,445): #loops 445 times
+    arena.move(robot , 1 , 0) #moves the robot 1 pixel right
+    arena.update() #updates the arena
+    time.sleep(0.01) #sleeps 0.01 seconds
 
     
-#robot_front, robot_back1, robot_back2 = arena.coords(robot)
-
-#print robot_front
 
 
-window.mainloop() # runs everything
+window.mainloop() 
