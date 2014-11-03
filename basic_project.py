@@ -26,7 +26,6 @@ gif1 = PhotoImage(file = 'flag')
 arena.create_image(500, 0, image = gif1, anchor = NE,)
 
 #create triangle robot
-robot = arena.create_oval(20, 460, 50,  490, fill="#366605") #Creates a circle for our robot, coloured a shade of green
 arena.pack() 
 arena.update_idletasks()
 
