@@ -67,7 +67,7 @@ for t in range(0,450):
     arena.move(robot , 0 , -0.45)
     arena.update()
     time.sleep(0.001)
-print robot (fill = 'red')
+
 #robot_front, robot_back1, robot_back2 = arena.coords(robot)
 
 #print robot_front
